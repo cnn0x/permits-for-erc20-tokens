@@ -1,15 +1,18 @@
-# Basic Sample Hardhat Project
+The project consists of 4 different contracts
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
+IERC2612.sol - interface for permit tokens
 
-Try running some of the following tasks:
+Permit.sol - the main contract that validates signatures and gives allowances
 
-```shell
-npx hardhat accounts
-npx hardhat compile
-npx hardhat clean
-npx hardhat test
-npx hardhat node
-node scripts/sample-script.js
-npx hardhat help
-```
+PermitToken.sol - ERC20 token with permit functionality supported
+
+PermitFactory.sol - Factory contract for creating ERC20 tokens that supports permit functionality
+
+my main sources for this project:
+https://eips.ethereum.org/EIPS/eip-2612
+
+https://eips.ethereum.org/EIPS/eip-712
+
+<br />
+
+---
