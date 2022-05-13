@@ -1,0 +1,17 @@
+{
+  "name": "polygon-task",
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.0",
+    "ethereum-waffle": "^3.2.0",
+    "hardhat": "^2.9.4",
+    "prettier": "^2.2.1",
+    "prettier-plugin-solidity": "^1.0.0-beta.3"
+  },
+  "dependencies": {
+    "@nomiclabs/hardhat-waffle": "^2.0.3",
+    "@openzeppelin/contracts": "^4.6.0",
+    "chai": "^4.3.6",
+    "eth-permit": "^0.2.1",
+    "ethers": "^5.6.5"
+  }
+}
