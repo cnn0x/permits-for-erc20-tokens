@@ -3,7 +3,7 @@ pragma solidity ^0.8.0;
 
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
-abstract contract Permit is ERC20 {
+abstract contract Permit {
   mapping(address => uint256) public nonces; //tracking nonces is essential for prevent replay attacks
 
   //the hash of the function name, target function the signature for
@@ -38,6 +38,7 @@ abstract contract Permit is ERC20 {
   // @notice this function can be used for gasless approvals
   // @dev if the signature is valid, owner allowance for spender will be set to max uint256 value
   function permit(
+    address tokenAddress,
     address owner,
     address spender,
     uint256 value,
@@ -71,6 +72,6 @@ abstract contract Permit is ERC20 {
     );
 
     //approval is set to max, ~uint256(0) is returns max value, uint256(-1) can be also used
-    _approve(owner, spender, ~uint256(0));
+    ERC20(tokenAddress).approve(spender, ~uint256(0));
   }
 }
